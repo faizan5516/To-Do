@@ -1,0 +1,12 @@
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 20px;
+}

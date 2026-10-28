@@ -2,11 +2,43 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  gap: 9px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px 16px 38px;
+  border: 1px dashed #deddeb;
+  border-radius: 14px;
+  background: #fcfbff;
+  text-align: center;
+}
+
+.empty-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #f0eeff;
+  color: #7164d4;
+  font-size: 21px;
+}
+
+.empty-title {
+  margin: 14px 0 4px;
+  color: #343348;
+  font-size: 15px;
+  font-weight: 650;
 }
 
 .empty-msg {
-  text-align: center;
-  color: #888;
-  font-style: italic;
-  padding: 20px;
+  max-width: 290px;
+  margin: 0;
+  color: #85849a;
+  font-size: 13px;
+  line-height: 1.5;
 }

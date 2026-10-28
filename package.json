@@ -1,0 +1,20 @@
+{
+  "name": "to-do",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/faizan5516/To-Do#readme",
+  "bugs": {
+    "url": "https://github.com/faizan5516/To-Do/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faizan5516/To-Do.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

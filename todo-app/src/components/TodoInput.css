@@ -1,34 +1,136 @@
+.task-entry {
+  margin-bottom: 22px;
+  padding: 17px;
+  border: 1px solid #eae9f5;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #faf9ff, #f7f8ff);
+}
+
+.entry-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 13px;
+}
+
+.entry-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: white;
+  color: #6658d3;
+  box-shadow: 0 1px 4px rgba(43, 42, 75, 0.08);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.entry-heading h2 {
+  margin: 0 0 2px;
+  color: #38374d;
+  font-size: 13px;
+}
+
+.entry-heading p {
+  margin: 0;
+  color: #89879b;
+  font-size: 11px;
+}
+
 .todo-input {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
 .todo-input input {
   flex: 1;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  min-width: 0;
+  padding: 12px 13px;
+  font-size: 14px;
+  border: 1px solid #e5e4ef;
+  border-radius: 9px;
+  background: white;
   outline: none;
 }
 
 .todo-input input:focus {
-  border-color: #4caf50;
-  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  border-color: #8174e8;
+  box-shadow: 0 0 0 3px rgba(129, 116, 232, 0.14);
 }
 
 .todo-input button {
-  padding: 12px 24px;
-  font-size: 16px;
-  background: #4caf50;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #7669df, #5e51c8);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 9px;
   cursor: pointer;
-  transition: background 0.2s;
+  box-shadow: 0 4px 10px rgba(101, 87, 211, 0.2);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .todo-input button:hover {
-  background: #45a049;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(101, 87, 211, 0.27);
+}
+
+.todo-input button span {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.task-options {
+  display: flex;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.task-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #77768a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.task-options select,
+.task-options input {
+  padding: 7px 9px;
+  border: 1px solid #e1e0eb;
+  border-radius: 7px;
+  background: white;
+  color: #48475c;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.task-options select:focus,
+.task-options input:focus {
+  outline: 2px solid rgba(129, 116, 232, 0.25);
+  border-color: #8174e8;
+}
+
+@media (max-width: 420px) {
+  .todo-input {
+    flex-direction: column;
+  }
+
+  .todo-input button {
+    width: 100%;
+  }
+
+  .task-options {
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
 }

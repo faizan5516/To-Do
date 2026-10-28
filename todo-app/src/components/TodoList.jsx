@@ -1,9 +1,17 @@
 import TodoItem from "./TodoItem";
 import "./TodoList.css";
 
-function TodoList({ todos, toggleTodo, deleteTodo }) {
+function TodoList({ todos, hasTasks, toggleTodo, deleteTodo }) {
   if (todos.length === 0) {
-    return <p className="empty-msg">No tasks yet. Add one above! ⬆️</p>;
+    return (
+      <div className="empty-state">
+        <span className="empty-icon" aria-hidden="true">{hasTasks ? "⌕" : "✦"}</span>
+        <p className="empty-title">{hasTasks ? "Nothing to see here" : "Your list is a blank canvas"}</p>
+        <p className="empty-msg">
+          {hasTasks ? "Try another filter to find your tasks." : "Add your first task above and start building momentum."}
+        </p>
+      </div>
+    );
   }
 
   return (
